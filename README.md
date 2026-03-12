@@ -10,4 +10,14 @@ This project demonstrates how to implement Global Exception Handling in ASP.NET 
 
 ## Endpoint
 
-GET /api/TestGlobalException/ex
+GET /api/TestGlobalException
+
+ASP.NET Core Request Logging Middleware
+
+##Features:
+- Logs HTTP request method and path
+- Logs response status code
+- Measures execution time
+## Endpoint
+GET /api/RequestLoggingMiddleware
+- 

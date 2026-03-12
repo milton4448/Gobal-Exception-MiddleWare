@@ -1,0 +1,20 @@
+What is Request Logging Middleware?/How do you log HTTP requests in ASP.NET Core using middleware?
+Request Logging Middleware is a custom ASP.NET Core middleware used to log incoming HTTP requests and outgoing responses, including request path, method, status code, and execution time.
+
+Middleware যা প্রতিটি HTTP request এবং response log করে।
+
+Example log:
+
+Request: GET /api/test
+Response Status: 200
+Execution Time: 120 ms
+
+Flow:
+
+Client Request
+      ↓
+Request Logging Middleware
+      ↓
+Controller
+      ↓
+Response
