@@ -9,8 +9,9 @@ namespace WebApplication1.Controllers
     {
         [HttpGet]
         [Route("ex")]
-        public IActionResult Get() { 
-            throw new Exception("Something wet wrong..");
+        public IActionResult Get() {
+            
+            throw new Exception("Something went wrong.....");
         }
     }
 }
