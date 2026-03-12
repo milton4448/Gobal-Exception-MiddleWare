@@ -21,3 +21,11 @@ ASP.NET Core Request Logging Middleware
 ## Endpoint
 GET /api/RequestLoggingMiddleware
 - 
+
+
+ASP.NET Core Rate Limiting Middleware
+
+Features
+- Limits API requests per IP
+- Prevents API abuse
+- Returns HTTP 429
