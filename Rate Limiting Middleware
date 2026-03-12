@@ -1,0 +1,42 @@
+How do you implement rate limiting in ASP.NET Core?
+একজন client নির্দিষ্ট সময়ের মধ্যে কতবার API call করতে পারবে তা limit করা।
+Example:
+
+User → 1 minute এ max 5 request
+
+৬ষ্ঠ request করলে:
+
+429 Too Many Requests
+
+2️⃣ Middleware Logic
+
+Flow:
+
+Client Request
+       ↓
+Rate Limiting Middleware
+       ↓
+Check Request Count
+       ↓
+If limit exceeded → 429 error
+       ↓
+Else → Continue pipeline
+
+Question: What is Rate Limiting?
+Ans: Rate limiting is a technique used to control the number of requests a client can make to an API within a specified time window to prevent abuse and protect system resources.
+
+Middleware Order (Important)
+
+Production pipeline:
+
+Exception Middleware
+↓
+Request Logging Middleware
+↓
+Rate Limiting Middleware
+↓
+Authentication
+↓
+Authorization
+↓
+Controllers
