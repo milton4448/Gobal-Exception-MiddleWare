@@ -8,9 +8,10 @@ namespace WebApplication1.Controllers
     public class TestGlobalExceptionController : ControllerBase
     {
         [HttpGet]
-        [Route("ex")]
-        public IActionResult Get() {
-            
+        //[Route("ex")]
+        public IActionResult GetGlobalException() {
+            //return Ok("Logging Middleware Working");
+
             throw new Exception("Something went wrong.....");
         }
     }
